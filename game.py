@@ -1,22 +1,18 @@
 #importing the time module
 import time
+import sys
 
-#welcoming the user
-print ("Hello, Time to play hangman! This is a test")
-print("I hope that it works!")
+def get_input(dia):
+     stri = ""
+     if sys.version_info[0] >= 3:
+         stri = input(dia)
+     else:
+         stri = raw_input(dia)
+     return stri
 
-
-#wait for 1 second
-time.sleep(1)
-
-time.sleep(0.5)
-
-userinput = input("Type in the hangman word for your choice: ")
-type(userinput)
-#here we set the secret
+userinput = get_input("Type in the hangman word for your choice: ")
 
 word = userinput
-
 
 #creates an variable with an empty value
 guesses = ''
@@ -61,7 +57,7 @@ while turns > 0:
     print
 
     # ask the user go guess a character
-    guess = input("guess a character:")
+    guess = get_input("guess a character:")
 
     # set the players guess to guesses
     guesses += guess

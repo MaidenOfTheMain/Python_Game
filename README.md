@@ -6,3 +6,5 @@ HacktoberFest is an amazing opportunity to contribute to different repos to get 
 
 
 For this repo, it is Python! This a Python game, but what game is it? Look through the code, run it, and figure it out. Feel free to make it better as you understand how Python works! :)
+
+-Fixed issue with input() by adding a function to use the right input() function depending on version type.
